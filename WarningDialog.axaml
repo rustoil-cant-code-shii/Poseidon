@@ -1,0 +1,88 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PoseidonGUI.WarningDialog"
+        Width="560"
+        Height="330"
+        MinWidth="560"
+        MinHeight="330"
+        MaxWidth="560"
+        MaxHeight="330"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        Background="#000000"
+        Title="POSEIDON // SECURITY WARNING">
+
+    <Window.Styles>
+
+        <Style Selector="TextBlock">
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+        </Style>
+
+        <Style Selector="Button">
+            <Setter Property="Background" Value="#001A1A"/>
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="BorderBrush" Value="#00FFFF"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+
+        <Style Selector="Button:pointerover">
+            <Setter Property="Background" Value="#003333"/>
+        </Style>
+
+    </Window.Styles>
+
+    <Border BorderBrush="#00FFFF"
+            BorderThickness="1"
+            Padding="25">
+
+        <Grid RowDefinitions="Auto,*,Auto"
+              RowSpacing="15">
+
+            <TextBlock Text="⚠ LEGAL / SECURITY WARNING"
+                       FontSize="20"
+                       FontWeight="Bold"/>
+
+            <StackPanel Grid.Row="1"
+                        Spacing="12">
+
+                <TextBlock Text="You are attempting to launch:"
+                           FontSize="14"/>
+
+                <TextBlock Name="ToolNameText"
+                           FontSize="19"
+                           FontWeight="Bold"/>
+
+                <TextBlock Text="Security tools can cause unintended effects when misused. Only use this software on systems and networks you own or have explicit authorization to test."
+                           FontSize="13"
+                           TextWrapping="Wrap"/>
+
+                <TextBlock Text="Unauthorized access or misuse may have legal consequences."
+                           FontSize="13"
+                           TextWrapping="Wrap"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="2"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Spacing="12">
+
+                <Button Name="CancelButton"
+                        Content="CANCEL"
+                        Width="110"/>
+
+                <Button Name="ContinueButton"
+                        Content="CONTINUE"
+                        Width="130"/>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Border>
+
+</Window>

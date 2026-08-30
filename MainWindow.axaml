@@ -1,0 +1,388 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PoseidonGUI.MainWindow"
+        Width="1100"
+        Height="700"
+        MinWidth="900"
+        MinHeight="600"
+        Title="POSEIDON v1.0">
+
+    <Window.Styles>
+
+        <!-- ========================================================= -->
+        <!-- GLOBAL -->
+        <!-- ========================================================= -->
+
+        <Style Selector="TextBlock">
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+        </Style>
+
+        <!-- ========================================================= -->
+        <!-- BUTTONS -->
+        <!-- ========================================================= -->
+
+        <Style Selector="Button">
+            <Setter Property="Background" Value="#001A1A"/>
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="BorderBrush" Value="#00FFFF"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="CornerRadius" Value="6"/>
+        </Style>
+
+        <Style Selector="Button:pointerover">
+            <Setter Property="Background" Value="#003333"/>
+        </Style>
+
+        <!-- ========================================================= -->
+        <!-- TAB BUTTONS -->
+        <!-- ========================================================= -->
+
+        <Style Selector="Button.poseidonTab">
+            <Setter Property="Background" Value="#001010"/>
+            <Setter Property="Foreground" Value="#008888"/>
+            <Setter Property="BorderBrush" Value="#006666"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="Padding" Value="14,7"/>
+            <Setter Property="MinWidth" Value="130"/>
+            <Setter Property="Height" Value="36"/>
+        </Style>
+
+        <Style Selector="Button.poseidonTab:pointerover">
+            <Setter Property="Background" Value="#002828"/>
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="BorderBrush" Value="#00AAAA"/>
+        </Style>
+
+        <!-- Selected tab -->
+        <Style Selector="Button.poseidonTab.selected">
+            <Setter Property="Background" Value="#002626"/>
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="BorderBrush" Value="#00FFFF"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="CornerRadius" Value="14"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="18,9"/>
+            <Setter Property="MinWidth" Value="150"/>
+            <Setter Property="Height" Value="42"/>
+        </Style>
+
+        <Style Selector="Button.poseidonTab.selected:pointerover">
+            <Setter Property="Background" Value="#003333"/>
+            <Setter Property="BorderBrush" Value="#FFFFFF"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+        </Style>
+
+        <!-- ========================================================= -->
+        <!-- TEXTBOX -->
+        <!-- ========================================================= -->
+
+        <Style Selector="TextBox">
+            <Setter Property="Background" Value="#000808"/>
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="BorderBrush" Value="#00FFFF"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+        </Style>
+
+        <!-- ========================================================= -->
+        <!-- TERMINAL SELECTION -->
+        <!-- ========================================================= -->
+
+        <Style Selector="TextBox.terminalSelection">
+            <Setter Property="Opacity" Value="1"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+
+            <Setter Property="Foreground" Value="Transparent"/>
+            <Setter Property="SelectionForegroundBrush" Value="#FFFFFF"/>
+            <Setter Property="SelectionBrush" Value="#55666666"/>
+
+            <Setter Property="CaretBrush" Value="Transparent"/>
+
+            <Setter Property="FontFamily" Value="monospace"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="0"/>
+        </Style>
+
+    </Window.Styles>
+
+    <!-- ============================================================= -->
+    <!-- ROOT -->
+    <!-- ============================================================= -->
+
+    <Grid Background="#000000"
+          RowDefinitions="Auto,Auto,*,Auto"
+          Margin="20">
+
+        <!-- ========================================================= -->
+        <!-- HEADER -->
+        <!-- ========================================================= -->
+
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Spacing="5">
+
+            <TextBlock Text="██████╗  ██████╗ ███████╗███████╗██╗██████╗  ██████╗ ███╗   ██╗"
+                       FontSize="14"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="██╔══██╗██╔═══██╗██╔════╝██╔════╝██║██╔══██╗██═══██╗████╗  ██║"
+                       FontSize="14"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="██████╔╝██║   ██║███████╗█████╗  ██║██║  ██║██║   ██║██╔██╗ ██║"
+                       FontSize="14"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="██╔═══╝ ██║   ██║╚════██║██╔══╝  ██║██║  ██║██║   ██║██║╚██╗██║"
+                       FontSize="14"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="██║     ╚██████╔╝███████║███████╗██║██████╔╝╚██████╔╝██║ ╚████║"
+                       FontSize="14"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="╚═╝      ╚═════╝ ╚══════╝╚══════╝╚═╝╚═════╝  ╚═════╝  ╚═╝  ╚═══╝"
+                       FontSize="14"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="P O S E I D O N   v1.0"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="ADVANCED SECURITY FRAMEWORK"
+                       FontSize="13"
+                       HorizontalAlignment="Center"/>
+
+        </StackPanel>
+
+        <!-- ========================================================= -->
+        <!-- TABS -->
+        <!-- ========================================================= -->
+
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="10"
+                    Margin="0,18,0,10">
+
+            <Button Name="DashboardTab"
+                    Classes="poseidonTab selected"
+                    Content="DASHBOARD"
+                    Click="DashboardTab_Click"/>
+
+            <Button Name="OffensiveTab"
+                    Classes="poseidonTab"
+                    Content="OFFENSIVE"
+                    Click="OffensiveTab_Click"/>
+
+            <Button Name="DefensiveTab"
+                    Classes="poseidonTab"
+                    Content="DEFENSIVE"
+                    Click="DefensiveTab_Click"/>
+
+        </StackPanel>
+
+        <!-- ========================================================= -->
+        <!-- CONTENT -->
+        <!-- ========================================================= -->
+
+        <Grid Grid.Row="2">
+
+            <!-- ===================================================== -->
+            <!-- DASHBOARD -->
+            <!-- ===================================================== -->
+
+            <Grid Name="DashboardPanel"
+                  Margin="0,10,0,20"
+                  ColumnDefinitions="*,2*"
+                  RowDefinitions="*">
+
+                <!-- MODULES -->
+
+                <Border Grid.Column="0"
+                        BorderBrush="#00FFFF"
+                        BorderThickness="1"
+                        Padding="12"
+                        Margin="0,0,15,0">
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Disabled">
+
+                        <StackPanel Spacing="7">
+
+                            <TextBlock Text="=== SECURITY MODULES ==="
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Margin="0,0,0,3"/>
+
+                            <Button Name="ZenmapButton"
+                                    Content="ZENMAP"/>
+
+                            <Button Name="WiresharkButton"
+                                    Content="WIRESHARK"/>
+
+                            <Button Name="HashcatButton"
+                                    Content="HASHCAT"/>
+
+                            <Button Name="HydraButton"
+                                    Content="HYDRA"/>
+
+                            <Button Name="SqlmapButton"
+                                    Content="SQLMAP"/>
+
+                            <Button Name="AircrackButton"
+                                    Content="AIRCRACK-NG"/>
+
+                            <Button Name="TerminalButton"
+                                    Content="OPEN TERMINAL"/>
+
+                        </StackPanel>
+
+                    </ScrollViewer>
+
+                </Border>
+
+                <!-- TERMINAL -->
+
+                <Border Grid.Column="1"
+                        BorderBrush="#00FFFF"
+                        BorderThickness="1"
+                        Padding="15">
+
+                    <Grid RowDefinitions="Auto,*,Auto,Auto">
+
+                        <TextBlock Text="=== POSEIDON TERMINAL ==="
+                                   FontSize="18"
+                                   FontWeight="Bold"/>
+
+                        <ScrollViewer Grid.Row="1"
+                                      Name="TerminalScroll"
+                                      Margin="0,15"
+                                      VerticalScrollBarVisibility="Auto"
+                                      HorizontalScrollBarVisibility="Auto">
+
+                            <Grid>
+
+                                <!-- Actual ANSI-colored terminal -->
+                                <TextBlock Name="TerminalOutput"
+                                           FontSize="14"
+                                           TextWrapping="NoWrap"/>
+
+                                <!-- Selection/copy layer -->
+                                <TextBox Name="TerminalSelection"
+                                         Classes="terminalSelection"
+                                         IsReadOnly="True"
+                                         AcceptsReturn="True"
+                                         TextWrapping="NoWrap"
+                                         Background="Transparent"
+                                         BorderBrush="Transparent"
+                                         BorderThickness="0"
+                                         Padding="0"/>
+
+                            </Grid>
+
+                        </ScrollViewer>
+
+                        <TextBox Grid.Row="2"
+                                 Name="TerminalInput"
+                                 Height="38"
+                                 FontSize="14"
+                                 PlaceholderText="Command..."
+                                 IsEnabled="False"/>
+
+                        <TextBlock Grid.Row="3"
+                                   Text="STATUS: ● TERMINAL OFFLINE"
+                                   Name="TerminalStatus"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Margin="0,10,0,0"/>
+
+                    </Grid>
+
+                </Border>
+
+            </Grid>
+
+            <!-- ===================================================== -->
+            <!-- OFFENSIVE -->
+            <!-- ===================================================== -->
+
+            <Grid Name="OffensivePanel"
+                  IsVisible="False"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center">
+
+                <StackPanel HorizontalAlignment="Center"
+                            Spacing="12">
+
+                    <TextBlock Text="=== OFFENSIVE SECURITY ==="
+                               FontSize="22"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="This tab will be available in a future update."
+                               FontSize="15"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="Dedicated offensive security tooling is planned for POSEIDON v2."
+                               FontSize="13"
+                               HorizontalAlignment="Center"/>
+
+                </StackPanel>
+
+            </Grid>
+
+            <!-- ===================================================== -->
+            <!-- DEFENSIVE -->
+            <!-- ===================================================== -->
+
+            <Grid Name="DefensivePanel"
+                  IsVisible="False"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center">
+
+                <StackPanel HorizontalAlignment="Center"
+                            Spacing="12">
+
+                    <TextBlock Text="=== DEFENSIVE SECURITY ==="
+                               FontSize="22"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="This tab will be available in a future update."
+                               FontSize="15"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="Dedicated defensive security tooling is planned for POSEIDON v2."
+                               FontSize="13"
+                               HorizontalAlignment="Center"/>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+        <!-- ========================================================= -->
+        <!-- FOOTER -->
+        <!-- ========================================================= -->
+
+        <TextBlock Grid.Row="3"
+                   Text="POSEIDON // ADVANCED SECURITY FRAMEWORK // UNAUTHORIZED ACCESS PROHIBITED"
+                   HorizontalAlignment="Center"
+                   FontSize="12"/>
+
+    </Grid>
+
+</Window>

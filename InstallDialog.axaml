@@ -1,0 +1,113 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PoseidonGUI.InstallDialog"
+        Width="600"
+        Height="360"
+        WindowStartupLocation="CenterOwner"
+        CanResize="False"
+        Background="#000000"
+        Title="POSEIDON // MODULE INSTALL">
+
+    <Window.Styles>
+
+        <Style Selector="TextBlock">
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+        </Style>
+
+        <Style Selector="Button">
+            <Setter Property="Background" Value="#001A1A"/>
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="BorderBrush" Value="#00FFFF"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Padding" Value="7"/>
+        </Style>
+
+        <Style Selector="Button:pointerover">
+            <Setter Property="Background" Value="#003333"/>
+        </Style>
+
+    </Window.Styles>
+
+    <Border Background="#000000"
+            BorderBrush="#00FFFF"
+            BorderThickness="1"
+            Padding="25">
+
+        <Grid RowDefinitions="Auto,*,Auto"
+              RowSpacing="16">
+
+            <!-- ATTENTION WARNING -->
+
+            <Border Name="WarningBorder"
+                    BorderBrush="#FF0000"
+                    BorderThickness="2"
+                    Padding="10"
+                    HorizontalAlignment="Stretch">
+
+                <TextBlock Name="WarningText"
+                           Text="⚠ MODULE NOT DETECTED"
+                           Foreground="#FF0000"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+
+            </Border>
+
+            <!-- INFORMATION -->
+
+            <StackPanel Grid.Row="1"
+                        Spacing="9">
+
+                <TextBlock Name="ToolText"
+                           FontSize="16"
+                           FontWeight="Bold"/>
+
+                <TextBlock Name="PackageText"
+                           FontSize="14"/>
+
+                <TextBlock Text="Poseidon did not find this module installed."
+                           FontSize="13"
+                           TextWrapping="Wrap"/>
+
+                <TextBlock Text="Open the POSEIDON TERMINAL and install the package manually:"
+                           FontSize="13"
+                           TextWrapping="Wrap"/>
+
+                <Border Background="#000808"
+                        BorderBrush="#FF0000"
+                        BorderThickness="1"
+                        Padding="10">
+
+                    <TextBox Name="CommandText"
+                             Foreground="#FF5555"
+                             Background="Transparent"
+                             BorderBrush="Transparent"
+                             BorderThickness="0"
+                             FontFamily="monospace"
+                             FontSize="15"
+                             FontWeight="Bold"
+                             IsReadOnly="True"
+                             TextWrapping="NoWrap"
+                             Padding="0"/>
+
+                </Border>
+
+            </StackPanel>
+
+            <!-- CLOSE -->
+
+            <Button Name="CloseButton"
+                    Grid.Row="2"
+                    Content="CLOSE"
+                    Width="80"
+                    Height="32"
+                    HorizontalAlignment="Right"/>
+
+        </Grid>
+
+    </Border>
+
+</Window>

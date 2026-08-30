@@ -1,0 +1,86 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PoseidonGUI.TerminalWarningDialog"
+        Width="560"
+        Height="330"
+        MinWidth="560"
+        MinHeight="330"
+        MaxWidth="560"
+        MaxHeight="330"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner"
+        Background="#000000"
+        Title="POSEIDON // TERMINAL WARNING">
+
+    <Window.Styles>
+
+        <Style Selector="TextBlock">
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+        </Style>
+
+        <Style Selector="Button">
+            <Setter Property="Background" Value="#001A1A"/>
+            <Setter Property="Foreground" Value="#00FFFF"/>
+            <Setter Property="BorderBrush" Value="#00FFFF"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontFamily" Value="monospace"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+
+        <Style Selector="Button:pointerover">
+            <Setter Property="Background" Value="#003333"/>
+        </Style>
+
+    </Window.Styles>
+
+    <Border BorderBrush="#00FFFF"
+            BorderThickness="1"
+            Padding="25">
+
+        <Grid RowDefinitions="Auto,*,Auto"
+              RowSpacing="15">
+
+            <TextBlock Text="⚠ POSEIDON TERMINAL WARNING"
+                       FontSize="19"
+                       FontWeight="Bold"/>
+
+            <StackPanel Grid.Row="1"
+                        Spacing="10">
+
+                <TextBlock Text="Commands entered here execute using your normal OS user privileges."
+                           FontSize="14"
+                           TextWrapping="Wrap"/>
+
+                <TextBlock Text="Only execute commands you understand and are authorized to run."
+                           FontSize="13"
+                           TextWrapping="Wrap"/>
+
+                <TextBlock Name="CountdownText"
+                           Text="AUTO-CLOSE IN: 10"
+                           FontSize="15"
+                           FontWeight="Bold"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="2"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        Spacing="12">
+
+                <Button Name="CancelButton"
+                        Content="CANCEL"
+                        Width="110"/>
+
+                <Button Name="ContinueButton"
+                        Content="I UNDERSTAND"
+                        Width="150"/>
+
+            </StackPanel>
+
+        </Grid>
+
+    </Border>
+
+</Window>
