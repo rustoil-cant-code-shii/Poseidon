@@ -1,0 +1,75 @@
+Poseidon Source-Available License
+
+Copyright © 2026 rustoil-cant-code-shii. All rights reserved.
+
+1. Permission
+
+Subject to the terms of this License, the copyright holder grants you a limited, non-exclusive, non-transferable, revocable license to:
+
+* View and inspect the source code of Poseidon.
+* Download and use official, unmodified releases of Poseidon.
+* Use Poseidon for personal, educational, research, and authorized security-testing purposes.
+* Modify a local copy of the source code for personal, educational, research, or authorized security-testing purposes, provided that the modified copy is not distributed.
+
+2. Restrictions
+
+You may not, without prior written permission from the copyright holder:
+
+* Redistribute Poseidon or copies of its source code.
+* Publish or distribute modified versions, forks, ports, or derivative versions of Poseidon.
+* Sell, sublicense, rent, lease, or otherwise commercially distribute Poseidon.
+* Offer Poseidon or a modified version of Poseidon as a hosted, managed, or paid service.
+* Remove or alter copyright, attribution, license, or other notices included with Poseidon.
+* Represent a modified version of Poseidon as an official release.
+* Use the Poseidon name, branding, logos, or artwork to imply endorsement or affiliation with the copyright holder.
+
+3. Authorized Security Testing
+
+Poseidon is intended to assist with legitimate security research, defensive security work, penetration testing, and testing of systems for which you have explicit authorization.
+
+You are solely responsible for ensuring that your use of Poseidon complies with all applicable laws, regulations, contracts, and permissions.
+
+The copyright holder does not authorize or grant permission to access, interfere with, damage, disrupt, or obtain unauthorized access to systems, accounts, networks, devices, or data belonging to another person or organization.
+
+4. No Warranty
+
+Poseidon is provided "AS IS", without warranty of any kind, express or implied.
+
+The copyright holder makes no guarantees regarding the accuracy, reliability, security, availability, or fitness of Poseidon for any particular purpose.
+
+5. Limitation of Liability
+
+To the maximum extent permitted by applicable law, the copyright holder shall not be liable for any direct, indirect, incidental, consequential, special, or other damages arising from or relating to the use, misuse, inability to use, modification, or distribution of Poseidon.
+
+Nothing in this License is intended to exclude or limit liability where such exclusion or limitation is prohibited by applicable law.
+
+6. Third-Party Software
+
+Poseidon may interact with, invoke, or distribute components provided by third parties. Such components remain subject to their respective licenses and terms.
+
+This License does not grant permission to use third-party software beyond the permissions granted by its applicable license.
+
+7. Termination
+
+Any rights granted under this License automatically terminate if you materially violate its terms.
+
+Upon termination, you must stop using and distributing Poseidon to the extent required by applicable law.
+
+8. Ownership
+
+Poseidon and its original source code, branding, artwork, and other original materials remain the property of the copyright holder.
+
+This License does not transfer ownership of Poseidon or any intellectual-property rights to you.
+
+9. Permission Requests
+
+Requests for permissions not granted by this License should be directed to the copyright holder through the official Poseidon project contact method.
+
+10. Acceptance
+
+By downloading, accessing, or using Poseidon, you acknowledge that you have read and understood this License and agree to comply with its terms.
+
+If you do not agree to these terms, you may not use Poseidon.
+
+Copyright © 2026 rustoil-cant-code-shii. All rights reserved.
+
